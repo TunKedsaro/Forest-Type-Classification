@@ -1,0 +1,402 @@
+,Nr.,Name,Abbrev.,General Formula,Specific Formula,Calculated,Info.,description
+0,1,Adjusted transformed soil-adjusted VI,ATSAVI,aNIR-a·RED-ba·NIR+RED-a·b+X(1+a2),1.229-1.225-0.031.229+5-1.22·0.03+0.08(1+1.222),Automatic,More,"The Adjusted Transformed Soil-Adjusted Vegetation Index (ATSAVI) is a vegetation index that is particularly effective in areas with high levels of soil brightness. It is based on the Transformed Soil-Adjusted Vegetation Index (TSAVI), but with an additional adjustment to enhance its sensitivity to vegetation in bright soil conditions. ATSAVI is calculated using the following formula:
+
+```
+ATSAVI = (SWIR - VIS) / (SWIR + VIS + 0.5) * (1 + (0.5 * (SWIR - VIS) / (SWIR + VIS + 0.5)))
+```
+
+where SWIR is the shortwave infrared band and VIS is the visible band.
+
+ATSAVI has been shown to be more effective than TSAVI and other vegetation indices in a variety of applications, including crop monitoring, forest mapping, and land cover classification. It is particularly useful in areas with high levels of soil brightness, such as arid and semi-arid regions."
+1,2,Aerosol free vegetation index 1600,AFRI1600,(NIR-0.661600nmNIR+0.661600nm),(9-0.66119+0.6611),Automatic,More,"Aerosol-Free Vegetation Index (AFRI1600) is a remote sensing index designed to estimate vegetation cover while minimizing the influence of atmospheric aerosols. It is derived from Sentinel-2 satellite imagery and is calculated using a combination of bands in the near-infrared (NIR) and red-edge (RE) portions of the spectrum. AFRI1600 utilizes the strong absorption of aerosols in the RE band to correct for their impact on NIR reflectance, resulting in a more accurate estimation of vegetation cover. This index is particularly useful in regions with high aerosol levels, such as urban or industrial areas, and can provide valuable information for monitoring vegetation health and land cover changes."
+2,3,Aerosol free vegetation index 2100,AFRI2100,(NIR-0.52100nmNIR+0.562100nm),(9-0.5129+0.5612),Automatic,More,"The Aerosol-Free Vegetation Index (AFRI2100) is designed to estimate the amount of vegetation present in an area by reducing the impact of atmospheric aerosols on the reflectance measurements made by the Sentinel-2 satellite. It uses a combination of bands from the satellite's MultiSpectral Instrument (MSI) to derive an index value that is sensitive to the presence of vegetation while minimizing the effects of atmospheric scattering and absorption. AFRI2100 can be used to monitor vegetation growth, estimate biomass, and assess the health of ecosystems."
+3,4,Alteration,,[1600:1700][2145:2185],1112,Automatic,More,"**Full name of index**: Alteration
+
+**Description**: The Alteration index is designed to highlight areas of altered minerals, which can be indicative of mineral deposits, hydrothermal alteration, or other geological processes. The index is calculated using a combination of visible, near-infrared, and shortwave infrared bands, and it relies on the strong absorption features of altered minerals in these wavelengths. The output of the Alteration index is a raster image, with higher values indicating areas of stronger alteration. This index can be useful for mineral exploration, geological mapping, and understanding the surface mineralogy of a region."
+4,5,Anthocyanin reflectance index,ARI,1550nm-1700nm,13-15,Automatic,More,"Anthocyanin reflectance index (ARI) is a narrowband vegetation index designed to enhance the signal of anthocyanin pigments in plant leaves. It is calculated as the ratio of reflectance in the green (560 nm) and red (670 nm) spectral bands, and is particularly sensitive to changes in anthocyanin concentration, which are often associated with plant stress or defense responses. ARI has been successfully used in various remote sensing applications, including vegetation monitoring, stress detection, and phenological studies."
+5,6,Ashburn Vegetation Index,AVI,2.0[800:1100]-[600:700],2.09-4,Automatic,More,"The Ashburn Vegetation Index (AVI) is a spectral index that quantifies the amount of green vegetation in an area. It is calculated using the near-infrared (NIR) and red (RED) bands of the Sentinel-2 satellite imagery. The AVI is expressed as a value between -1 and 1, with higher values indicating more green vegetation. The AVI is commonly used to monitor vegetation health and productivity, as well as to map land cover and land use."
+6,7,Atmospherically Resistant Vegetation Index,ARVI,NIR-RED-y(RED-BLUE)NIR+RED-y(RED-BLUE),8a-5-y(5-1)8a+5-y(5-1),Manual,More,"- Atmospherically Resistant Vegetation Index (ARVI): ARVI is a vegetation index that is designed to minimize the effects of atmospheric scattering and absorption. This makes it particularly useful for remote sensing of vegetation in areas with high levels of atmospheric haze or clouds. ARVI is calculated using the following equation: ARVI = (NIR - Green) / (NIR + Green + Blue)
+
+- Automated Water Extraction Index (AWEI): AWEI is a water index that is designed to automatically extract water features from satellite imagery. This index is based on the fact that water has a high reflectance in the near-infrared band and a low reflectance in the blue band. AWEI is calculated using the following equation: AWEI = (NIR - Blue) / (NIR + Blue)
+
+- Built-Up Index (BUI): BUI is a built-up index that is designed to identify built-up areas from satellite imagery. This index is based on the fact that built-up areas have a high reflectance in the red and near-infrared bands and a low reflectance in the blue band. BUI is calculated using the following equation: BUI = (NIR - Blue) / (NIR + Blue + Red)
+
+- Crop Vegetation Index (CVI): CVI is a vegetation index that is designed to measure the greenness of vegetation. This index is based on the fact that healthy vegetation has a high reflectance in the near-infrared band and a low reflectance in the red band. CVI is calculated using the following equation: CVI = (NIR - Red) / (NIR + Red)
+
+- Difference Vegetation Index (DVI): DVI is a vegetation index that is designed to measure the difference in reflectance between the near-infrared and red bands. This index is based on the fact that healthy vegetation has a high reflectance in the near-infrared band and a low reflectance in the red band. DVI is calculated using the following equation: DVI = NIR - Red
+
+- Enhanced Vegetation Index (EVI): EVI is a vegetation index that is designed to enhance the signal from vegetation while minimizing the effects of soil and atmospheric conditions. This index is calculated using the following equation: EVI = 2.5 * (NIR - Red) / (NIR + 6 * Red - 7.5 * Blue + 1)
+
+- Green Normalized Difference Vegetation Index (GNDVI): GNDVI is a vegetation index that is designed to measure the greenness of vegetation. This index is based on the fact that healthy vegetation has a high reflectance in the green band and a low reflectance in the red band. GNDVI is calculated using the following equation: GNDVI = (Green - Red) / (Green + Red)
+
+- Leaf Area Index (LAI): LAI is a measure of the amount of leaf area per unit ground area. This index is an important measure of the health and productivity of vegetation. LAI is calculated using the following equation: LAI = 0.5 * (NIR - Red) / (NIR + Red)
+
+- Normalized Difference Built-Up Index (NDBI): NDBI is a built-up index that is designed to measure the difference in reflectance between the near-infrared and shortwave infrared bands. This index is based on the fact that built-up areas have a high reflectance in the shortwave infrared band and a low reflectance in the near-infrared"
+7,8,Atmospherically Resistant Vegetation Index 2,ARVI2,-0.18+1.17(NIR-REDNIR+RED),-0.18+1.17(9-59+5),Automatic,More,"The Atmospherically Resistant Vegetation Index 2 (ARVI2) is a vegetation index designed to minimize the effects of atmospheric interference on vegetation measurements. It uses a combination of visible and near-infrared bands to measure the amount of green vegetation present in a given area. ARVI2 is particularly useful in areas with high levels of atmospheric aerosols or haze, as it is less sensitive to these effects than other vegetation indices."
+8,9,Blue-wide dynamic range vegetation index,BWDRVI,0.1NIR-BLUE0.1NIR+BLUE,0.19-10.19+1,Automatic,More,"The Blue-Wide Dynamic Range Vegetation Index (BWDRVI) is designed to enhance the detection of vegetation in areas with high background brightness. It uses the blue band to minimize the influence of atmospheric effects and the red edge band to capture the reflectance properties of vegetation. The BWDRVI is particularly effective in regions with bright or heterogeneous backgrounds, such as urban areas or agricultural fields, where traditional vegetation indices may struggle to distinguish between vegetation and non-vegetated surfaces."
+9,10,Browning Reflectance Index,BRI,1550nm-1700nmNIR,13-159,Automatic,More,"The Browning Reflectance Index (BRI) is a remote sensing index developed to monitor vegetation health and water stress. It is derived from Sentinel-2 satellite imagery and is calculated as BRI = (SWIR - NIR) / (SWIR + NIR), where SWIR is the shortwave infrared band and NIR is the near-infrared band. BRI values range from -1 to 1, with higher values indicating healthier vegetation and lower values indicating vegetation stress or water deficit. BRI is particularly useful for detecting vegetation stress in arid and semi-arid regions, and has been used to monitor drought and crop water status."
+10,11,Canopy Chlorophyll Content Index,CCCI,NIR-rededgeNIR+rededgeNIR-RedNIR+Red,9-59+59-Red9+Red,Automatic,More,"The Canopy Chlorophyll Content Index (CCCI) is a remote sensing index derived from Sentinel-2 imagery. It measures the chlorophyll content in vegetation, and is used to estimate the photosynthetic capacity of plants. CCCI is calculated using the following formula:
+
+CCCI = ( ( NIR - Red ) - ( Green - Blue ) ) / ( ( NIR - Red ) + ( Green - Blue ) )
+
+where NIR is the reflectance in the near-infrared band, Red is the reflectance in the red band, Green is the reflectance in the green band, and Blue is the reflectance in the blue band.
+
+CCCI values range from -1 to 1, with higher values indicating higher chlorophyll content. CCCI is a widely used index for monitoring vegetation health and productivity, and has been used in a variety of applications, including forest monitoring, agriculture, and ecosystem research."
+11,12,Chlorophyll Absorption Ratio Index,CARI,(700nm670nm)√(a·670+670nm+b)2(a2+1)0.5,(54)√(5-3150·670+4+(3-(5-3150·550)))2(5-31502+1)0.5,Automatic,More,"The Chlorophyll Absorption Ratio Index (CARI) is a remote sensing index utilized to estimate chlorophyll content in vegetation. It exploits the contrasting absorption properties of chlorophyll in the red (670 nm) and green (550 nm) portions of the electromagnetic spectrum. CARI is calculated as the ratio of the reflectance in the red band to that in the green band, with higher CARI values indicative of increased chlorophyll concentration. This index is sensitive to vegetation greenness and can be employed to assess plant health, monitor crop growth, and identify areas of vegetation stress."
+12,13,Chlorophyll Absorption Ratio Index 2,CARI2,(|(a·[670]+[670]+b)|(a2+1)0.5)([700][670]),(|(5-3150·4+4+3-(a·3))|(a2+1)0.5)(54),Automatic,More,"The Chlorophyll Absorption Ratio Index 2 (CARI2) is a vegetation index used to estimate chlorophyll content in leaves. It exploits the contrast between high absorption of green light by chlorophyll and the high reflectance of near-infrared light by leaf structures. CARI2 is calculated as the ratio of the difference between the reflectance in the green and red bands to the sum of the reflectance in the green and red bands:
+
+```
+CARI2 = (Rgreen - Rred) / (Rgreen + Rred)
+```
+
+Values of CARI2 range from -1 to 1, with higher values indicating higher chlorophyll content."
+13,14,Chlorophyll Green,Chlgreen,([760:800][540:560])(-1),(73)(-1),Automatic,More,"Chlorophyll Green (Chlgreen) index is derived from Sentinel-2 imagery and is used to estimate the concentration of green chlorophyll in vegetation. It is calculated as a ratio of the reflectance values in the green and red bands. Higher values of Chlgreen indicate higher concentrations of green chlorophyll, which is a key indicator of plant health and photosynthetic activity."
+14,15,Chlorophyll Index Green,CIgreen,NIRGREEN-1,93-1,Automatic,More,"The Chlorophyll Index Green (CIgreen) is a vegetation index derived from Sentinel-2 imagery that estimates the amount of green chlorophyll present in vegetation. It is calculated as the ratio of the reflectance in the green band (Band 3) to the reflectance in the red band (Band 4). CIgreen values range from -1 to 1, with higher values indicating higher chlorophyll content. This index is commonly used to assess plant health, monitor vegetation growth, and estimate crop yields. CIgreen is particularly sensitive to changes in chlorophyll concentration, making it a valuable tool for detecting stress or damage to vegetation."
+15,16,Chlorophyll IndexRedEdge,CIrededge,NIRrededge-1,95-1,Automatic,More,"The Chlorophyll Index RedEdge (CIrededge) is a vegetation index derived from Sentinel-2 satellite imagery. It is calculated using the red-edge band (740 nm) and the near-infrared band (865 nm) and is sensitive to the presence of chlorophyll in vegetation. CIrededge is used to estimate vegetation chlorophyll content, canopy chlorophyll content, and leaf area index. It is also used to monitor vegetation health and stress, and to detect changes in vegetation cover."
+16,17,Chlorophyll Red-Edge,Chlred-edge,([760:800][690:720])(-1),(75)(-1),Automatic,More,"The Chlorophyll Red-Edge index (ChlRed-edge) is a spectral vegetation index designed to estimate chlorophyll content in vegetation canopies. It is calculated using the reflectance values in the red-edge region of the electromagnetic spectrum, where chlorophyll exhibits a strong absorption feature. The index is sensitive to changes in chlorophyll content and canopy structure, and it has been widely used to monitor vegetation dynamics, assess crop health, and estimate primary productivity."
+17,18,Chlorophyll vegetation index,CVI,NIRREDGREEN2,9532,Automatic,More,"The Chlorophyll Vegetation Index (CVI) is a measure of vegetation greenness and chlorophyll content. It is calculated using the near-infrared (NIR) and green bands of the Sentinel-2 satellite imagery. The CVI is a proxy for leaf area index (LAI) and can be used to monitor vegetation growth and productivity. It is also used to assess the health of vegetation and to detect stress caused by factors such as drought, disease, or pollution."
+18,19,Coloration Index,CI,RED-BLUERED,2015-05-01 00:00:00,Automatic,More,"The Coloration Index (CI) is an index derived from Sentinel-2 satellite imagery that measures the relative greenness and redness of vegetation. It is calculated as the ratio of the near-infrared band (Band 8) to the red band (Band 4), and is sensitive to changes in chlorophyll content, leaf area, and canopy structure. Higher CI values indicate healthier vegetation, while lower values indicate vegetation under stress or with reduced photosynthetic activity."
+19,20,Corrected Transformed Vegetation Index,CTVI,"NDVI+0,5|NDVI+0,5|·√|(NDVI)+0,5|","(5-35+3)+0,5|(5-35+3)+0,5|·√|((5-35+3))+0,5|",Automatic,More,"The Corrected Transformed Vegetation Index (CTVI) is a vegetation index designed to reduce the effect of atmospheric scattering, especially in areas with high aerosol concentrations. CTVI is calculated as follows: CTVI = (R_NIR - R_Green - (R_NIR - R_Blue) * (R_NIR / R_Blue)) / (R_NIR + R_Green + R_Blue). R_NIR, R_Green, and R_Blue represent the reflectance values in the near-infrared, green, and blue bands, respectively. CTVI is particularly useful for monitoring vegetation in areas with dense aerosols, such as urban environments or regions affected by smoke or dust."
+20,21,CRI550,CRI550,[510](-1)-[550](-1),2(-1)-3(-1),Automatic,More,"CRI550 (Chlorophyll Red Index 550) is a Sentinel-2 vegetation index sensitive to chlorophyll content in vegetation. It is calculated using the reflectance values of bands 5 (red) and 6 (near-infrared) of the Sentinel-2 MultiSpectral Instrument (MSI). CRI550 is particularly useful for monitoring vegetation health and biomass, as it is strongly correlated with leaf chlorophyll concentration. Higher CRI550 values indicate higher chlorophyll content and, therefore, healthier and more productive vegetation."
+21,22,CRI700,CRI700,[510](-1)-[700](-1),2(-1)-5(-1),Automatic,More,"CRI700 (Crop Ratio Index 700) is a vegetation index that measures the difference in reflectance between the red (665 nm) and near-infrared (705 nm) bands of the Sentinel-2 satellite. CRI700 is sensitive to changes in chlorophyll content and leaf area index, and has been shown to be useful for monitoring crop health and biomass. High values of CRI700 indicate healthy vegetation with high chlorophyll content and leaf area index, while low values indicate stressed vegetation or bare soil."
+22,23,Datt1,Datt1,850nm-710nm850nm-680nm,8-58-4,Automatic,More,"Datt1 is a vegetation index that uses the near-infrared (NIR) and red bands of the Sentinel-2 satellite imagery to estimate the amount of vegetation present in a given area. It is calculated as:
+
+Datt1 = (NIR - Red) / (NIR + Red)
+
+Datt1 values range from -1 to 1, with higher values indicating more vegetation. Datt1 is commonly used to map vegetation cover, monitor vegetation health, and estimate crop yields."
+23,24,Datt4,Datt4,672nm550nm·708nm,43·5,Automatic,More,"Datt4 is a vegetation index that measures the chlorophyll content of leaves. It is calculated using the reflectance values of bands 4 and 3 of the Sentinel-2 satellite. Datt4 values range from -1 to 1, with higher values indicating higher chlorophyll content. Datt4 is commonly used to monitor vegetation health and productivity, as well as to estimate crop yields."
+24,25,Datt6,Datt6,860nm550nm·708nm,8a3·5,Automatic,More,"Datt6 is an index designed to monitor crop water stress, particularly in areas affected by drought. It is formulated as a ratio between the reflectance measured in the near-infrared (NIR) and shortwave infrared (SWIR) bands, specifically NIR/SWIR. Datt6 is sensitive to changes in plant water content, with higher values indicating increased water stress. This index is commonly used in agricultural applications to assess crop health, irrigation requirements, and drought severity."
+25,26,Difference 678/500,D678/500,678nm-500nm,2024-02-04 00:00:00,Automatic,More,"The Difference 678/500 index is a vegetation index that measures the difference in reflectance between two spectral bands, specifically, band 5 (678nm) and band 4 (500nm), in the Sentinel-2 satellite imagery. This index is designed to highlight areas with high vegetation cover, as healthy vegetation typically has high reflectance in the near-infrared band (band 5) and low reflectance in the green band (band 4). A higher Difference 678/500 index value indicates denser and healthier vegetation, while lower values indicate sparse or stressed vegetation."
+26,27,Difference 800/550,D800/550,800nm-550nm,2024-03-08 00:00:00,Automatic,More,"The D800/550 index, also known as the Difference 800/550, is a measure of the relative absorption of radiation by chlorophyll and carotenoids in plant canopies. It is calculated by subtracting the reflectance in the red edge band (800 nm) from the reflectance in the green band (550 nm). The resulting value is positive for healthy vegetation, as chlorophyll absorbs more radiation in the green band than in the red edge band, and negative for non-vegetated surfaces or senescent vegetation. The D800/550 index is often used for detecting vegetation cover, monitoring vegetation health, and estimating leaf area index."
+27,28,Difference 800/680,D800/680,800nm-680nm,2024-04-08 00:00:00,Automatic,More,"The Difference 800/680 index is a spectral index that uses the reflectance values of Sentinel-2 bands 8 (865 nm) and 6 (665 nm) to calculate the difference between the two bands. This index is sensitive to the presence of vegetation, as chlorophyll absorbs light in the red (665 nm) band and reflects light in the near-infrared (865 nm) band. Higher values of the Difference 800/680 index indicate a greater presence of vegetation, while lower values indicate less vegetation or other land cover types."
+28,29,Difference 833/658,D833/658,833nm-658nm,2024-04-08 00:00:00,Automatic,More,"The D833/658 index, also known as the Difference 833/658 index, is a spectral index derived from the Sentinel-2 satellite imagery. It measures the difference in reflectance between bands 8 (near-infrared) and 6 (red edge) of the electromagnetic spectrum. This index is commonly used to highlight vegetation areas, as healthy vegetation absorbs more red light and reflects more near-infrared light. Higher values of the D833/658 index indicate denser and healthier vegetation, while lower values indicate sparse or stressed vegetation."
+29,30,Difference NIR/Green Green Difference Vegetation Index,GDVI,NIR-G,2024-03-09 00:00:00,Automatic,More,"The Green Difference Vegetation Index (GDVI) is a normalized difference vegetation index that uses the difference between near-infrared (NIR) and green bands to measure the density and greenness of vegetation. It is calculated as (NIR - Green) / (NIR + Green). GDVI values range from -1 to 1, with higher values indicating denser and greener vegetation. GDVI is particularly sensitive to changes in leaf chlorophyll content and can be used to monitor vegetation health, crop yield, and land cover changes. It is widely used in remote sensing applications due to its simplicity and effectiveness in identifying and quantifying vegetation cover."
+30,31,Differenced Vegetation Index MSS,DVIMSS,2.4[800:1100]-[600:700],2.49-4,Automatic,More,"The Differenced Vegetation Index MSS (DVIMSS) is a spectral index that utilizes the near-infrared (NIR) and shortwave infrared (SWIR) bands of Sentinel-2 satellite imagery to quantify vegetation cover and vigor. It is calculated as the difference between the NIR and SWIR bands. DVIMSS values range from negative (low vegetation cover) to positive (high vegetation cover). Areas with abundant vegetation typically exhibit high DVIMSS values, while areas with sparse or no vegetation have lower DVIMSS values. This index is particularly sensitive to changes in vegetation health and biomass, making it a valuable tool for monitoring forest and agricultural ecosystems, as well as assessing drought stress and land degradation."
+31,32,Enhanced Vegetation Index,EVI,2.5NIR-RED(NIR+6RED-7.5BLUE)+1,2.59-5(9+65-7.51)+1,Automatic,More,"The Enhanced Vegetation Index (EVI) is a vegetation index designed to enhance the vegetation signal while minimizing noise from atmospheric and soil background effects. It is calculated from the reflectance values in the red, blue, and near-infrared (NIR) bands of a satellite image. EVI is particularly useful for monitoring vegetation health and productivity, as it is sensitive to changes in chlorophyll content and canopy structure. EVI values typically range from -1 to 1, with higher values indicating more vigorous vegetation."
+32,33,Enhanced Vegetation Index 2,EVI2,2.4NIR-REDNIR+RED+1,2.49-59+5+1,Automatic,More,"Enhanced Vegetation Index 2 (EVI2) is a vegetation index designed to enhance the vegetation signal while minimizing the soil and atmospheric influences. It is a modification of the Enhanced Vegetation Index (EVI), which was developed to address some of the limitations of the Normalized Difference Vegetation Index (NDVI). EVI2 incorporates the blue band into the calculation, which helps to reduce the influence of the soil background and improve the sensitivity to vegetation changes. The index is calculated using the following formula:
+
+EVI2 = 2.5 * (NIR - RED) / (NIR + 2.4 * RED + 1)
+
+where NIR is the near-infrared band, and RED is the red band.
+
+EVI2 values range from -1 to 1, with higher values indicating denser and more vigorous vegetation. The index is widely used for vegetation monitoring, land cover classification, and agricultural applications."
+33,34,Enhanced Vegetation Index 2 -2,EVI2,2.5NIR-REDNIR+2.4RED+1,2.59-59+2.45+1,Automatic,More,"Enhanced Vegetation Index 2 (EVI2): A modified version of the Enhanced Vegetation Index (EVI), designed to minimize the influence of atmospheric effects and soil background noise, resulting in a more sensitive measure of vegetation greenness and health."
+34,35,EPI,EPI,a[672]([550]·[708])b,a4(3·5)b,Automatic,More,"Enhanced Vegetation Index (EPI)
+
+The Enhanced Vegetation Index (EPI) is a vegetation index that is calculated using data from the near-infrared (NIR) and red (Red) bands of Sentinel-2 imagery. EPI is a measure of the amount of green vegetation in an area, and it is often used to monitor vegetation health and growth. EPI values range from -1 to 1, with higher values indicating more green vegetation."
+35,36,"Ferric iron, Fe2+",Fe2+,[2145:2185][760:860]+[520:600][630:690],128+34,Automatic,More,"Ferric iron (Fe2+) is an index that measures the abundance of ferric iron in soil and rock surfaces. Fe2+ is a key component of many minerals, including hematite and magnetite, which give soils and rocks their characteristic red and black colors. The presence of Fe2+ can also indicate the presence of other minerals, such as sulfides and carbonates. 
+
+Fe2+ is calculated from Sentinel-2 imagery using a band ratio method. The ratio of the green band to the red band is used to estimate the amount of Fe2+ in the soil. Higher values of Fe2+ indicate a higher concentration of ferric iron in the soil."
+36,37,"Ferric iron, Fe3+",Fe3+,[630:690][520:600],43,Automatic,More,"Ferric iron (Fe3+) is an essential nutrient for plants and microorganisms. It is involved in various physiological processes, including photosynthesis, respiration, and nitrogen fixation. The Fe3+ index is a measure of the amount of ferric iron in a given area. It is derived from Sentinel-2 satellite imagery and can be used to monitor the health of vegetation and identify areas of iron deficiency."
+37,38,Ferric Oxides,,[1600:1700][760:860],118,Automatic,More,"Ferric oxides are minerals containing iron in the ferric state (Fe3+). They are commonly found in soils and rocks and are often responsible for their reddish or brownish color. The Ferric Oxides index is calculated using Sentinel-2 imagery and provides information on the presence and abundance of ferric oxides in the observed area. This index can be used to map soil types, identify mineral deposits, and study geological processes."
+38,39,Ferrous iron,,[2145:2185][760:860]+[520:600][630:690],128+34,Automatic,More,"Ferrous iron is an index used in remote sensing to measure the amount of iron in a given area. It is calculated using a combination of visible and infrared bands from Sentinel 2 imagery. Ferrous iron is an important indicator of the health of vegetation, as it is essential for photosynthesis. It can also be used to map mineral deposits and to track the progress of environmental remediation projects."
+39,40,Ferrous Silicates,,[2145:2185][1600:1700],1211,Automatic,More,"Ferrous Silicates index pertains to the proportion of iron in a given area. It is a proxy for the presence of mafic and ultramafic minerals, which are composed of iron-bearing silicates such as pyroxene and olivine. High values of Ferrous Silicates index indicate a high concentration of these minerals, which can be indicative of volcanic activity, or the presence of iron-rich rocks and soils."
+40,41,Global Environment Monitoring Index,GEMI,(n(1-0.25n)-RED-0.1251-RED),(2(92-52)+1.59+0.559+5+0.5(1-0.252(92-52)+1.59+0.559+5+0.5)-5-0.1251-5),Automatic,More,"**Global Environment Monitoring Index (GEMI)**
+
+The Global Environment Monitoring Index (GEMI) is a vegetation index derived from Sentinel-2 imagery that provides information about the health and vigor of vegetation. It is calculated using a combination of red, green, and near-infrared bands, and is sensitive to changes in chlorophyll content, leaf area index, and canopy cover. GEMI has been widely used for monitoring vegetation dynamics, assessing crop health, and detecting environmental stress. Higher GEMI values indicate healthier and more vigorous vegetation, while lower values indicate vegetation that is stressed or damaged."
+41,42,Global Vegetation Moisture Index,GVMI,(NIR+0.1)-(SWIR+0.02)(NIR+0.1)+(SWIR+0.02),(9+0.1)-(12+0.02)(9+0.1)+(12+0.02),Automatic,More,"The Global Vegetation Moisture Index (GVMI) is a spectral index that estimates vegetation water content from remotely sensed optical data. It combines information from the near-infrared (NIR) and shortwave infrared (SWIR) bands to quantify the amount of water absorbed by vegetation. GVMI values range from 0 to 1, with higher values indicating greater vegetation water content. It is a useful metric for monitoring vegetation health, drought stress, and irrigation management."
+42,43,Gossan,,[1600:1700][630:690],114,Automatic,More,"The Gossan index is designed to identify areas with potential mineral deposits by analyzing the spectral reflectance of iron oxides in the visible and near-infrared wavelengths. It capitalizes on the unique spectral signature of gossans, which are surface expressions of mineralized zones, characterized by the presence of iron oxides and hydroxides. The index values range from negative to positive, with higher values indicating a higher probability of gossan presence. This index is particularly useful in exploration for copper, gold, and iron ore deposits."
+43,44,Green atmospherically resistant vegetation index,GARI,NIR-(GREEN-(BLUE-RED))NIR-(GREEN+(BLUE-RED)),9-(3-(1-5))9-(3+(1-5)),Automatic,More,"The Green Atmospherically Resistant Vegetation Index (GARI) is a vegetation index designed to quantify the amount of green vegetation present in an area. It is calculated using a combination of the green, red, and near-infrared bands of the Sentinel-2 satellite imagery. The GARI index is particularly useful for monitoring vegetation in areas with high levels of atmospheric interference, such as haze or smoke, as it is less affected by these factors than other vegetation indices. Higher GARI values indicate a higher density of green vegetation."
+44,45,Green leaf index,GLI,2GREEN-RED-BLUE2GREEN+RED+BLUE,23-5-123+5+1,Automatic,More,"The Green Leaf Index (GLI) is a vegetation index calculated from Sentinel-2 imagery. It is used to estimate the amount of photosynthetically active vegetation in a given area. The GLI is calculated as the ratio of the near-infrared (NIR) and green bands of the Sentinel-2 imagery. NIR radiation is strongly reflected by healthy vegetation, while green radiation is absorbed by chlorophyll in the leaves. Therefore, a high GLI value indicates a high density of healthy vegetation. GLI can be used to monitor vegetation health, biomass, and crop yields. Additionally, it can be used to identify areas of deforestation and land degradation."
+45,46,Green Normalized Difference Vegetation Index,GNDVI,NIR-[540:570]NIR+[540:570],9-39+3,Automatic,More,"The Green Normalized Difference Vegetation Index (GNDVI) is a vegetation index that measures the amount of green vegetation in an area. It is calculated using the following formula:
+
+GNDVI = (Green - Red) / (Green + Red)
+
+where Green is the reflectance value in the green band and Red is the reflectance value in the red band.
+
+The GNDVI ranges from -1 to 1. Values close to 1 indicate high levels of green vegetation, while values close to -1 indicate low levels of green vegetation. The GNDVI is often used to monitor vegetation health and to estimate the amount of biomass in an area."
+46,47,Green Optimized Soil Adjusted Vegetation Index,GOSAVI,NIR-GNIR+G+Y,9-39+3+Y,Automatic,More,"Green Optimized Soil Adjusted Vegetation Index (GOSAVI) is a vegetation index designed to enhance vegetation signal while minimizing soil background influence. GOSAVI utilizes a combination of green, red, and near-infrared bands and incorporates soil adjustment factors to suppress soil reflectance, particularly in arid and semi-arid regions where soil can significantly impact vegetation indices. By isolating vegetation reflectance, GOSAVI provides a more accurate representation of vegetation cover, health, and productivity, making it suitable for monitoring vegetation dynamics, crop health assessment, and land cover classification."
+47,48,Green Soil Adjusted Vegetation Index,GSAVI,NIR-GNIR+G+L(1+L),9-39+3+L(1+L),Automatic,More,"Green Soil Adjusted Vegetation Index (GSAVI) is a vegetation index that uses a combination of the green, red, and near-infrared (NIR) bands of Sentinel 2 imagery to estimate the amount of chlorophyll in vegetation. It is specifically designed to minimize the effects of soil brightness, which can interfere with the accuracy of other vegetation indices. GSAVI is calculated as follows:
+
+GSAVI = (NIR - Green) / (NIR + Green + Red)"
+48,49,Green-Blue NDVI,GBNDVI,NIR-(GREEN+BLUE)NIR+(GREEN+BLUE),9-(3+1)9+(3+1),Automatic,More,"The Green-Blue Normalized Difference Vegetation Index (GBNDVI) is a vegetation index that uses the green and blue bands of the Sentinel-2 satellite imagery to estimate the amount of vegetation present in a given area. GBNDVI is calculated as follows:
+
+GBNDVI = (Green - Blue) / (Green + Blue)
+
+where Green is the reflectance value of the green band and Blue is the reflectance value of the blue band.
+
+GBNDVI values range from -1 to 1, with higher values indicating more vegetation. GBNDVI is particularly sensitive to changes in vegetation cover, making it a useful tool for monitoring deforestation, agricultural practices, and other land-use changes."
+49,50,Green-Red NDVI,GRNDVI,NIR-(GREEN+RED)NIR+(GREEN+RED),9-(3+5)9+(3+5),Automatic,More,"The Green-Red NDVI (GRNDVI) is a type of Normalized Difference Vegetation Index (NDVI) that utilizes the green and red bands of Sentinel-2 satellite imagery. It is calculated as:
+
+(Green - Red) / (Green + Red)
+
+The GRNDVI is particularly sensitive to chlorophyll content in vegetation and provides information about the amount and health of photosynthetically active vegetation. Higher GRNDVI values indicate denser and healthier vegetation, while lower values represent sparse or unhealthy vegetation. The GRNDVI is widely used in remote sensing applications for monitoring vegetation cover, biomass estimation, and land cover classification."
+50,51,Hue,H,arctan(2R-G-B30.5(G-B)),arctan(25-3-130.5(3-1)),Automatic,More,"Hue is an angle representing the dominant color in a three-dimensional color space. In the case of Sentinel-2 imagery, the three dimensions are the red, green, and blue (RGB) bands. The hue is calculated as the angle between the vector representing the pixel's RGB values and the vector representing the red axis in the RGB color space. Hue is expressed in degrees, with 0° representing red, 120° representing green, and 240° representing blue."
+51,52,Ideal vegetation index,IVI,NIR-ba·RED,9-ba·5,Automatic,More,"The Ideal Vegetation Index (IVI) is a spectral index that utilizes a combination of Sentinel-2 bands to provide an accurate estimation of green vegetation cover. IVI is formulated to minimize noise from soil and atmospheric influences, making it particularly suitable for monitoring vegetation health and biomass in various ecosystems. The index effectively captures the spectral response of vegetation, allowing for precise quantification of vegetation abundance and vigor."
+52,53,Infrared percentage vegetation index,IPVI,NIRNIR+RED2(NDVI+1),99+52((5-35+3)+1),Automatic,More,"The Infrared Percentage Vegetation Index (IPVI) is a remote sensing vegetation index that utilizes the near-infrared (NIR) and visible red (RED) bands of Sentinel-2 imagery. It calculates the percentage of NIR reflectance relative to the sum of NIR and RED reflectance as follows:
+
+IPVI = (NIR / (NIR + RED)) * 100
+
+The IPVI provides valuable insights into vegetation density and vigor, with higher values indicating greater photosynthetic activity and canopy cover. It is commonly used to monitor vegetation health, assess crop yields, and map land cover types. The IPVI is particularly sensitive to changes in leaf area index (LAI), making it a useful indicator of plant growth and biomass production."
+53,54,Intensity,I,(130.5)(R+G+B),(130.5)(5+3+1),Automatic,More,"Intensity index is a measure of the overall brightness of a pixel in a Sentinel-2 image, calculated by summing the values of all bands and dividing by the total number of bands. It provides information about the overall reflectance of the surface, and can be used to distinguish between different land cover types and to estimate vegetation density and vigor. Higher values indicate brighter pixels, typically associated with reflective surfaces such as urban areas, snow, or bright vegetation, while lower values indicate darker pixels, typically associated with absorptive surfaces such as water, dense vegetation, or bare ground."
+54,55,Inverse reflectance 550,IR550,550nm(-1),3(-1),Automatic,More,"Inverse Reflectance 550 (IR550) is an index derived from Sentinel-2 satellite imagery. It represents the inverse of reflectance at the 550 nm wavelength, with higher values indicating lower reflectance and, potentially, higher absorption or scattering of light at that wavelength. This index can be useful for identifying areas of vegetation, water, and other features that exhibit specific absorption or scattering characteristics at the 550 nm wavelength."
+55,56,Inverse reflectance 700,IR700,700nm(-1),5(-1),Automatic,More,"The Inverse Reflectance 700 (IR700) index is a metric derived from Sentinel-2 satellite imagery that measures the reflectance of electromagnetic radiation at a wavelength of 700 nanometers (nm). Reflectance refers to the proportion of incident radiation reflected by a surface. This index is particularly sensitive to changes in vegetation cover and chlorophyll content. Higher IR700 values indicate lower vegetation density and lower chlorophyll levels, while lower IR700 values indicate denser vegetation with higher chlorophyll content. IR700 is often used in remote sensing applications to monitor vegetation health, estimate biomass, and map land cover changes."
+56,57,Laterite,,[1600:1700][2145:2185],1112,Automatic,More,"The Laterite index is a vegetation index calculated using Sentinel 2 satellite imagery, specifically the bands B05 (green), B06 (red edge), and B07 (red). It measures the variations in iron oxides and hydroxides present in the soil, which is a key indicator of soil degradation and laterite formation. Laterite is a reddish-brown soil formed under conditions of intense weathering and leaching in tropical regions. The Laterite index can help identify areas with high laterite content, which can have implications for land use planning, agriculture, and environmental management."
+57,58,Leaf Chlorophyll Index,LCI,[850]-[710][850]+[680],8-58+4,Automatic,More,"Leaf Chlorophyll Index (LCI) is a vegetation index that estimates the amount of chlorophyll in leaves. It uses the red and near-infrared bands of Sentinel 2 imagery and is calculated as:
+
+```
+LCI = (NIR - Red) / (NIR + Red)
+```
+
+LCI values range from -1 to 1, with higher values indicating higher chlorophyll content. LCI is used to monitor vegetation health and stress, as well as to estimate leaf area index and biomass."
+58,59,Leaf Water Content Index,LWCI,log(1-(NIR-MIDIR))-log(1-(NIR-MIDIR)),log(1-(9-MIDIR))-log(1-(9-MIDIR)),Automatic,More,"Leaf Water Content Index (LWCI) estimates the water content in leaves based on the reflectance properties of vegetation in near-infrared and shortwave infrared bands. Higher LWCI values indicate leaves with greater water content and can be used to assess plant water status, drought stress, and vegetation health. It is calculated using the following formula:
+
+LWCI = (NIR - SWIR) / (NIR + SWIR)
+
+where NIR is the reflectance in the near-infrared band and SWIR is the reflectance in the shortwave infrared band."
+59,60,Log Ratio,LogR,log(NIRRED),log(95),Automatic,More,Log Ratio (LogR): The Log Ratio index is a measure of the relative difference between two spectral bands. It is calculated by taking the natural logarithm of the ratio of the reflectance values in the two bands. The Log Ratio index is often used to enhance features that are subtle or difficult to see in a single band image. It can also be used to remove the effects of atmospheric scattering and path radiance.
+60,61,Maccioni,,780nm-710nm780nm-680nm,7-57-4,Automatic,More,"The Maccioni index measures the vegetation vigor and canopy structure based on the visible and near-infrared bands of Sentinel-2 imagery. It utilizes the ratio between the red and near-infrared bands to assess the amount and condition of vegetation, with higher values indicating denser and healthier vegetation. The Maccioni index is particularly useful for monitoring vegetation health, detecting changes in plant cover, and assessing overall ecosystem productivity."
+61,62,MCARI/MTVI2,MCARI/MTVI2,((700nm-670nm)-0.2(700nm-550nm))(700nm670nm)(1.51.2(800nm-550nm)-2.5(670nm-550nm)√(2800nm+1)2-(6800nm-5√670nm)-0.5),((5-4)-0.2(5-3))(54)(1.51.2(8-3)-2.5(4-3)√(28+1)2-(68-5√4)-0.5),Automatic,More,"The MCARI/MTVI2 index is a vegetation index that combines the Modified Chlorophyll Absorption Ratio Index (MCARI) and the Mid-Infrared Vegetation Index 2 (MTVI2). The MCARI is sensitive to chlorophyll content, while the MTVI2 is sensitive to leaf water content. The combination of these two indices provides a more robust measure of vegetation health than either index alone. High values of MCARI/MTVI2 indicate healthy vegetation, while low values indicate stressed vegetation."
+62,63,MCARI/OSAVI,MCARI/OSAVI,(700nm-670nm)-0.2(700nm-550nm)(700nm670nm)(1+0.16)800nm-670nm800nm+670nm+0.16,(5-4)-0.2(5-3)(54)(1+0.16)8-48+4+0.16,Automatic,More,"The Modified Chlorophyll Absorption Ratio Index (MCARI) is a vegetation index that is specifically designed to enhance the information content of Sentinel-2 data for vegetation studies. It is calculated using the visible, near-infrared, and red-edge bands of the Sentinel-2 sensor and is designed to minimize the effects of atmospheric scattering and other environmental factors that can affect the accuracy of vegetation indices. MCARI is particularly well-suited for estimating chlorophyll content and vegetation biomass, and it has been shown to have a strong correlation with vegetation health and productivity.
+
+The Optimized Soil-Adjusted Vegetation Index (OSAVI) is a vegetation index that is similar to the Normalized Difference Vegetation Index (NDVI), but it is designed to minimize the effects of soil background on vegetation indices. It is calculated using the visible and near-infrared bands of the Sentinel-2 sensor and is designed to enhance the contrast between vegetation and soil, making it more suitable for vegetation studies in areas with variable soil conditions. OSAVI is commonly used to estimate vegetation cover and biomass, and it has been shown to have a strong correlation with vegetation health and productivity."
+63,64,mCRIG,mCRIG,([510:520](-1)-[560:570](-1))·NIR,(2(-1)-3(-1))·9,Automatic,More,"The Modified Chlorophyll Absorption Ratio Index (mCRIG) is a vegetation index derived from Sentinel-2 imagery that is highly sensitive to canopy chlorophyll content. mCRIG is calculated as (705nm - 754nm) / (705nm + 754nm), where 705nm represents the red edge reflectance and 754nm represents the near-infrared reflectance. mCRIG values typically range from -1 to 1, with higher values indicating higher chlorophyll content. mCRIG has been found to be particularly useful for monitoring vegetation stress and nutrient deficiencies, as well as for estimating leaf area index and biomass."
+64,65,mCRIRE,mCRIRE,([510:520](-1)-[690:700](-1))·NIR,(2(-1)-5(-1))·9,Automatic,More,"The Modified Chlorophyll Absorption Ratio Index (mCRIRE) is a vegetation index that is used to estimate chlorophyll content in plants. It is calculated using the following formula:
+
+mCRIRE = (705 - 560)/(705 + 560)
+
+where 705 and 560 are the reflectance values at 705 nm and 560 nm, respectively.
+
+The mCRIRE index is sensitive to changes in chlorophyll content, and it can be used to monitor vegetation health and stress. It is also used to estimate leaf area index and biomass."
+65,66,Mid-infrared vegetation index,MVI,[700:1300][1570:1780],911,Automatic,More,"Mid-infrared vegetation index (MVI) is a normalized ratio vegetation index (NDVI) based on measurements from the mid-infrared (MIR) bands of the Sentinel-2 satellite. It is designed to enhance the detection of vegetation and its vigor by utilizing the unique spectral reflectance characteristics of vegetation in the MIR region. MVI is calculated as the ratio of the difference between the MIR (band 8) and red (band 4) bands to their sum: (MIR - Red) / (MIR + Red). MVI is particularly useful for vegetation monitoring, especially in dense vegetation areas, where traditional NDVI may saturate, and for estimating canopy biomass and vegetation health."
+66,67,Misra Green Vegetation Index,MGVI,-0.386[500:600]-0.530[600:700]+0.535[700:800]+0.532[800:1100],0.15180000000000005,Automatic,More,"Misra Green Vegetation Index (MGVI) is a vegetation index designed to enhance the contrast between vegetation and soil. It is calculated using the following formula:
+MGVI = (NIR - Green) / (NIR + Green)
+where NIR is the near-infrared band and Green is the green band. MGVI values range from -1 to 1, with higher values indicating denser vegetation. MGVI is particularly useful for studying vegetation in agricultural areas, as it can be used to differentiate between different crop types and to monitor crop health."
+67,68,Misra Non Such Index,MNSI,0.404[500:600]-0.039[600:700]-0.505[700:800]+0.762[800:1100],0.4043-0.0394-0.5056+0.7629,Automatic,More,"The Misra Non Such Index (MNSI) is an indicator designed to monitor vegetation health and moisture stress. It employs a normalized ratio formula that combines Sentinel-2 bands B8 (Near-Infrared) and B11 (Short-Wave Infrared) as (B8 - B11) / (B8 + B11). Values range from -1 to 1, where higher positive values indicate healthier vegetation with minimal moisture stress. Conversely, negative values signify water deficiency or plant stress, providing valuable insights into agricultural productivity and drought monitoring."
+68,69,Misra Soil Brightness Index,MSBI,0.406[500:600]+0.600[600:700]+0.645[700:800]+0.243[800:1100],0.4063+0.6004+0.6456+0.2439,Automatic,More,"Misra Soil Brightness Index (MSBI) is an index developed to estimate soil brightness from Sentinel-2 satellite imagery. It is calculated using the following formula:
+
+```
+MSBI = (2 * NIR - Red - Blue) / (2 * NIR + Red + Blue)
+```
+
+where NIR, Red, and Blue represent the reflectance values in the near-infrared, red, and blue bands of the Sentinel-2 imagery.
+
+MSBI is sensitive to soil brightness and can be used to identify areas with high or low soil brightness. It has been found to be useful for various applications, such as soil mapping, land degradation assessment, and crop monitoring."
+69,70,Misra Yellow Vegetation Index,MYVI,0.723[500:600]-0.597[600:700]+0.206[700:800]-0.278[800:1100],0.7233-0.5974+0.2066-0.2789,Automatic,More,"The Misra Yellow Vegetation Index (MYVI) is an empirical index designed to estimate vegetation cover in areas with high soil background. It is calculated as a ratio of green and blue bands, and has been found to be effective in distinguishing between vegetation and non-vegetation areas, as well as estimating the amount of green vegetation cover. The MYVI is particularly useful in areas where traditional vegetation indices, such as the Normalized Difference Vegetation Index (NDVI), are saturated or unable to distinguish between vegetation and non-vegetation due to high soil background or other factors."
+70,71,mND680,mND680,800nm-680nm800nm+680nm-2445nm,8-48+4-21,Automatic,More,"The mND680 (modified Normalized Difference Vegetation Index) is a vegetation index designed to enhance the sensitivity of the traditional NDVI to changes in canopy chlorophyll content. It is calculated as (ρ705 - ρ680) / (ρ705 + ρ680), where ρ705 and ρ680 represent the reflectance values in the 705 nm and 680 nm bands, respectively. The mND680 has been shown to be particularly effective in detecting subtle changes in vegetation health and chlorophyll content, and is commonly used in applications such as crop monitoring, forest health assessment, and land cover classification."
+71,72,Modified anthocyanin reflectance index,mARI,([530:570](-1)-[690:710](-1))·NIR,(3(-1)-5(-1))·9,Automatic,More,"The Modified Anthocyanin Reflectance Index (mARI) is a vegetation index used to estimate anthocyanin content in leaves. Anthocyanins are pigments that give plants their red, purple, and blue colors. They are produced in response to environmental stresses such as high light, cold temperatures, and drought. mARI is calculated using the following formula:
+
+mARI = (R750 - R670) / (R750 + R670)
+
+where R750 is the reflectance at 750 nm and R670 is the reflectance at 670 nm.
+
+mARI values range from -1 to 1. Values closer to 1 indicate higher anthocyanin content, while values closer to -1 indicate lower anthocyanin content. mARI can be used to monitor plant health and stress, and to map the distribution of anthocyanins in vegetation."
+72,73,Modified Chlorophyll Absorption in Reflectance Index,MCARI,((700nm-670nm)-0.2(700nm-550nm))(700nm670nm),((5-4)-0.2(5-3))(54),Automatic,More,"Modified Chlorophyll Absorption in Reflectance Index (MCARI) is a vegetation index that estimates chlorophyll content and canopy structural parameters. It is calculated from Sentinel-2 imagery using the near-infrared (NIR), red (R), and green (G) bands. MCARI is sensitive to changes in chlorophyll concentration, leaf area index, and canopy cover, making it useful for monitoring vegetation health, biomass, and phenology."
+73,74,Modified Chlorophyll Absorption in Reflectance Index 1,MCARI1,1.2(2.5(800nm-670nm)-1.3(800nm-550nm)),1.2(2.5(8-4)-1.3(8-3)),Automatic,More,"The Modified Chlorophyll Absorption in Reflectance Index 1 (MCARI1) is a remote sensing index designed to estimate chlorophyll concentration in vegetation canopies. MCARI1 utilizes a combination of visible, near-infrared, and red-edge bands to account for soil background and atmospheric influences, making it particularly suitable for monitoring vegetation in areas with high soil variability or atmospheric disturbances. Higher MCARI1 values generally indicate higher chlorophyll concentrations, which are associated with increased photosynthetic activity and plant health."
+74,75,Modified Chlorophyll Absorption in Reflectance Index 2,MCARI2,(1.52.5(800nm-670nm)-1.3(800nm-550nm)√(2800nm+1)2-(6800nm-5√670nm)-0.5),(1.52.5(8-4)-1.3(8-3)√(28+1)2-(68-5√4)-0.5),Automatic,More,"The Modified Chlorophyll Absorption in Reflectance Index 2 (MCARI2) is a vegetation index that is used to estimate the amount of chlorophyll in plant leaves. It is calculated using the following formula:
+
+MCARI2 = (0.2 * (R750 - R680) - (R700 - R670)) / (0.2 * (R750 - R680) + (R700 - R670))
+
+where R750, R680, R700, and R670 are the reflectance values at 750, 680, 700, and 670 nm, respectively.
+
+MCARI2 values range from -1 to 1. Values close to 1 indicate high levels of chlorophyll, while values close to -1 indicate low levels of chlorophyll. MCARI2 is a more sensitive indicator of chlorophyll content than the Normalized Difference Vegetation Index (NDVI), and it is less affected by atmospheric conditions."
+75,76,Modified NDVI,mNDVI,800nm-680nm800nm+680nm-2445nm,8-48+4-21,Automatic,More,"**Modified Normalized Difference Vegetation Index (mNDVI)**
+
+The mNDVI is a variant of the Normalized Difference Vegetation Index (NDVI) designed to enhance vegetation signal in areas with high aerosol levels. It is calculated using the following formula:
+
+```
+mNDVI = (NIR - Red) / (NIR + Red + Blue)
+```
+
+where NIR is the near-infrared band, Red is the red band, and Blue is the blue band.
+
+The mNDVI is less sensitive to atmospheric interference than the NDVI, making it more suitable for monitoring vegetation in areas with high levels of aerosols, such as urban environments or regions with frequent dust or smoke. It is commonly used to assess vegetation health, monitor crop growth, and detect changes in land cover."
+76,77,Modified Simple Ratio,mSR,800nm-445nm680nm-445nm,8-14-1,Automatic,More,"The Modified Simple Ratio (mSR) is a vegetation index that measures the chlorophyll content of vegetation. It is calculated using the following formula:
+
+mSR = (B8 -B11) / (B8 +B11)
+
+where B8 is the reflectance in the near-infrared band (842 nm) and B11 is the reflectance in the shortwave infrared band (1610 nm).
+
+The mSR index is sensitive to changes in chlorophyll content and can be used to monitor vegetation health and productivity. It is often used in conjunction with other vegetation indices, such as the Normalized Difference Vegetation Index (NDVI), to provide a more complete picture of vegetation conditions."
+77,78,"Modified Simple Ratio 670,800",MSR670,800nm670nm-1√800nm670nm+1,84-1√84+1,Automatic,More,"The Modified Simple Ratio 670,800 (MSR670) is a spectral index that utilizes visible and near-infrared bands of Sentinel-2 imagery to estimate the density and chlorophyll content of vegetation. Specifically, it combines the reflectance values in the red (670 nm) and near-infrared (800 nm) bands, enhancing the contrast between vegetative areas and other land cover types. MSR670 is particularly sensitive to changes in vegetation cover, making it a valuable tool for monitoring plant health, biomass estimation, and land cover classification."
+78,79,Modified Simple Ratio NIR/RED,MSRNir/Red,(NIRRED)-1√(NIRRED)+1,(95)-1√(95)+1,Automatic,More,"Modified Simple Ratio Normalized Infrared (NIR)/RED (MSR NIR/RED) is a vegetation index that compares the reflectance of near-infrared (NIR) and red bands to estimate the amount of vegetation present in a given area. It is calculated as the ratio of the difference between the NIR and red bands to the sum of the NIR and red bands. MSR NIR/RED is sensitive to changes in vegetation density and is often used to monitor vegetation health and productivity. Higher values of MSR NIR/RED indicate denser vegetation, while lower values indicate less vegetation."
+79,80,Modified Soil Adjusted Vegetation Index,MSAVI,2NIR+1-√(2NIR+1)2-8(NIR-RED)2,29+1-√(29+1)2-8(9-5)2,Automatic,More,"Modified Soil Adjusted Vegetation Index (MSAVI) is a vegetation index designed to minimize soil brightness influences and enhance vegetation sensitivity. It is calculated from Sentinel-2 bands using the following formula:
+
+MSAVI = (2 * Sentinel-2 band 8 - Sentinel-2 band 4 - Sentinel-2 band 1) / (2 * Sentinel-2 band 8 + Sentinel-2 band 1 + 0.5)
+
+MSAVI values range from -1 to 1, with higher values indicating denser and healthier vegetation. It is particularly useful in areas with high soil brightness, such as arid and semi-arid regions, and can be used to monitor vegetation health and productivity, as well as to estimate biomass and crop yields."
+80,81,Modified Soil Adjusted Vegetation Index hyper,MSAVIhyper,(0.5)((2800nm+1)-√(2800nm+1)2-8(800nm-670nm)),(0.5)((28+1)-√(28+1)2-8(8-4)),Automatic,More,"Modified Soil Adjusted Vegetation Index (MSAVIhyper) is a spectral index designed to enhance vegetation information while minimizing soil background influences. It is a modification of the original Soil Adjusted Vegetation Index (SAVI), incorporating an additional soil factor (hyperbolic tangent) to further account for varying soil brightness. MSAVIhyper is particularly effective in areas with high soil variability, reducing the impact of soil reflectance on vegetation assessment. It is commonly used in remote sensing applications to map vegetation cover, monitor vegetation health, and estimate vegetation parameters such as leaf area index and chlorophyll content."
+81,82,Modified Triangular Vegetation Index 1,MTVI1,1.2(1.2(800nm-550nm)-2.5(670nm-550nm)),1.2(1.2(8-3)-2.5(4-3)),Automatic,More,"Modified Triangular Vegetation Index 1 (MTVI1) is a vegetation index designed to enhance vegetation information in satellite imagery. It utilizes the triangular shape of the vegetation reflectance spectrum to calculate an index that is sensitive to changes in vegetation cover. MTVI1 is particularly useful for monitoring vegetation dynamics, such as changes in leaf area index, chlorophyll content, and biomass. It has been widely used in agricultural applications, forestry, and land use change studies."
+82,83,Modified Triangular Vegetation Index 2,MTVI2,(1.51.2(800nm-550nm)-2.5(670nm-550nm)√(2800nm+1)2-(6800nm-5√670nm)-0.5),(1.51.2(8-3)-2.5(4-3)√(28+1)2-(68-5√4)-0.5),Automatic,More,"Modified Triangular Vegetation Index 2 (MTVI2) is a vegetation index used to assess the greenness of vegetation. It is calculated using the visible red (665nm), near-infrared (842nm), and shortwave infrared (1610nm) bands of Sentinel-2 imagery. MTVI2 is sensitive to changes in vegetation cover and can be used to monitor vegetation health, crop growth, and deforestation. Higher values of MTVI2 indicate denser and healthier vegetation, while lower values indicate sparse or stressed vegetation."
+83,84,Nonlinear vegetation index,NLI,[780:1400]2-RED[780:1400]2+RED,92-592+5,Automatic,More,"**Nonlinear vegetation index (NLI)**
+
+The nonlinear vegetation index (NLI) is a vegetation index that measures the greenness of vegetation. It is calculated using the following formula:
+
+```
+NLI = (NIR - Red) / (NIR + Red + Blue)
+```
+
+where NIR is the near-infrared band, Red is the red band, and Blue is the blue band.
+
+The NLI is a measure of the amount of chlorophyll in vegetation. Chlorophyll is a green pigment that absorbs blue and red light and reflects green light. Therefore, vegetation with high levels of chlorophyll will have high NLI values.
+
+The NLI is used to monitor vegetation health and growth. It can also be used to identify areas of deforestation and agriculture."
+84,85,Norm G,Norm G,GNIR+R+G,39+5+3,Automatic,More,"The Normalized Greenness (Norm G) index is a vegetation index that measures the amount of greenness in vegetation. It is calculated by dividing the difference between the green and red bands by the sum of the green and red bands. The Norm G index values range from -1 to 1, with higher values indicating more greenness. The Norm G index is commonly used to monitor vegetation health and productivity. It is also used to estimate chlorophyll content and leaf area index."
+85,86,Norm NIR,Norm NIR,NIRNIR+R+G,99+5+3,Automatic,More,"Normalized Near-Infrared (Norm NIR) measures the amount of near-infrared radiation reflected from a surface compared to the total amount of radiation reflected across all wavelengths. It is sensitive to vegetation, as healthy vegetation strongly reflects near-infrared radiation. Norm NIR can be used to estimate vegetation properties such as biomass, leaf area index, and chlorophyll content."
+86,87,Norm R,Norm R,RNIR+R+G,59+5+3,Automatic,More,"Normalized ratio (Norm R) is a spectral index that measures the relative difference between two bands of the electromagnetic spectrum. It is calculated as the ratio of the reflectance values of two bands, typically the red and near-infrared bands. Norm R is used to enhance the contrast between vegetation and other land cover types, making it useful for applications such as vegetation mapping, crop monitoring, and land use classification."
+87,88,Normalized Difference 550/450 Plant pigment ratio,PPR,550nm-450nm550nm+450nm,3-13+1,Automatic,More,"The Plant Pigment Ratio (PPR) is a normalized index derived from Sentinel-2 imagery that quantifies the relative abundance of plant pigments. It is calculated from reflectance values in two narrow spectral bands centered at 550 nm and 450 nm. PPR values range from -1 to 1, with higher values indicating a higher concentration of photosynthetic pigments such as chlorophyll and carotenoids. This index is particularly useful for monitoring vegetation health, as changes in PPR can be indicative of stress or disease conditions."
+88,89,Normalized Difference 550/650 Photosynthetic vigour ratio,PVR,550nm-650nm550nm+650nm,3-43+4,Automatic,More,"Normalized Difference 550/650 Photosynthetic vigour ratio (PVR) is a spectral index derived from Sentinel-2 satellite imagery. It is calculated using the reflectance values at 550nm (green) and 650nm (red) wavelengths. PVR measures the photosynthetic activity of vegetation, particularly the ratio of absorbed photosynthetically active radiation (PAR) to incident PAR. It is a proxy for plant health and vitality, with higher values indicating greater photosynthetic activity and plant productivity."
+89,90,Normalized Difference 774/677,ND774/677,774nm-677nm774nm+677nm,7-47+4,Automatic,More,"The Normalized Difference 774/677 (ND774/677) is a vegetation index that quantifies the amount of green biomass in an area. It is calculated using the following formula:
+
+ND774/677 = (Band 774 - Band 677) / (Band 774 + Band 677)
+
+The index values range from -1 to 1, with higher values indicating more green biomass. ND774/677 is particularly sensitive to changes in leaf area index (LAI), which is a measure of the amount of leaf area per unit of ground area. This makes it a useful tool for monitoring vegetation health and productivity."
+90,91,Normalized Difference 780/550 Green NDVI hyper,GNDVIhyper,780nm-550nm780nm+550nm,7-37+3,Automatic,More,
+91,92,Normalized Difference 782/666,ND782/666,782nm-666nm782nm+666nm,7-47+4,Automatic,More,
+92,93,Normalized Difference 790/670,ND790/670,790nm-670nm790nm+670nm,7-47+4,Automatic,More,
+93,94,Normalized Difference 800/2170,ND800/2170,800nm-2170nm800nm+2170nm,8-128+12,Automatic,More,
+94,95,Normalized Difference 800/470 Pigment specific normalised difference C2,PSNDc2,800nm-470nm800nm+470nm,8-28+2,Automatic,More,
+95,96,Normalized Difference 800/500 Pigment specific normalised difference C1,PSNDc1,800nm-500nm800nm+500nm,8-28+2,Automatic,More,
+96,97,Normalized Difference 800/550 Green NDVI hyper 2,GNDVIhyper2,800nm-550nm800nm+550nm,8-38+3,Automatic,More,
+97,98,Normalized Difference 800/650 Pigment specific normalised difference B1,PSNDb1,800nm-650nm800nm+650nm,8-48+4,Automatic,More,
+98,99,Normalized Difference 800/675 Pigment specific normalised difference A1,PSNDa1,800nm-675nm800nm+675nm,8-48+4,Automatic,More,
+99,100,"Normalized Difference 800/680 Pigment specific normalised difference A2, Lichtenthaler indices 1, NDVIhyper",ND800/680,800nm-680nm800nm+680nm,8-48+4,Automatic,More,
+100,101,Normalized Difference 819/1600 NDII,NDII,819nm-1600nm819nm+1600nm,8-118+11,Automatic,More,
+101,102,Normalized Difference 819/1649 NDII 2,NDII2,819nm-1649nm819nm+1649nm,8-118+11,Automatic,More,
+102,103,Normalized Difference 820/1600 Normalized Difference Moisture Index,NDMI,820nm-1600nm820nm+1600nm,8-118+11,Automatic,More,
+103,104,Normalized Difference 827/668,ND827/668,827nm-668nm827nm+668nm,8-48+4,Automatic,More,
+104,105,Normalized Difference 833/1649 Infrared Index,ND833/1649,833nm-1649nm833nm+1649nm,8-118+11,Automatic,More,
+105,106,Normalized Difference 833/658,ND833/658,833nm-658nm833nm+658nm,8-48+4,Automatic,More,
+106,107,Normalized Difference 860/1640,SIWSI,860nm-1640nm860nm+1640nm,8a-118a+11,Automatic,More,
+107,108,Normalized Difference 895/675,ND895/675,895nm-675nm895nm+675nm,8-48+4,Automatic,More,
+108,109,"Normalized Difference Green/Red Normalized green red difference index, Visible Atmospherically Resistant Indices Green (VIgreen)",NGRDI,GREEN-REDGREEN+RED,3-53+5,Automatic,More,
+109,110,Normalized Difference MIR/NIR Normalized Difference Vegetation Index (in case of strong atmospheric disturbances),NDVI,MIR-NIRMIR+NIR,12-812+8,Automatic,More,
+110,111,Normalized Difference NIR/Blue Blue-normalized difference vegetation index,BNDVI,NIR-BLUENIR+BLUE,9-19+1,Automatic,More,
+111,112,Normalized Difference NIR/Green Green NDVI,GNDVI,NIR-GREENNIR+GREEN,9-39+3,Automatic,More,
+112,113,Normalized Difference NIR/MIR Modified Normalized Difference Vegetation Index,MNDVI,NIR-MIRNIR+MIR,9-129+12,Automatic,More,
+113,114,"Normalized Difference NIR/Red Normalized Difference Vegetation Index, Calibrated NDVI - CDVI",NDVI,NIR-REDNIR+RED,8-48+4,Automatic,More,
+114,115,Normalized Difference NIR/Rededge Normalized Difference Red-Edge,NDRE,NIR-rededgeNIR+rededge,9-59+5,Automatic,More,
+115,116,Normalized Difference NIR/SWIR Normalized Burn Ratio,NBR,NIR-SWIRNIR+SWIR,9-129+12,Automatic,More,
+116,117,Normalized Difference Red/Green Redness Index,RI,R-GR+G,5-35+3,Automatic,More,
+117,118,Normalized Difference Salinity Index,NDSI,[1600:1700]-[2145:2185][1600:1700]+[2145:2185],11-1211+12,Automatic,More,
+118,119,Normalized Difference Vegetation Index 690-710,NDVI690-710,NIR-[690:710]NIR+[690:710],9-59+5,Automatic,More,
+119,120,Normalized Difference Vegetation Index C,NDVIc,NIR-REDNIR+RED(1-SWIR-SWIIRminSWIRmax-SWIRmin),9-59+5(1-12-SWIIRminSWIRmax-SWIRmin),Automatic,More,
+120,121,Optimized Soil Adjusted Vegetation Index,OSAVI,(1+Y)800nm-670nm800nm+670nm+Y,(1+0.16)8-48+4+0.16,Automatic,More,
+121,122,Pan NDVI,PNDVI,NIR-(GREEN+RED+BLUE)NIR+(GREEN+RED+BLUE),9-(3+5+1)9+(3+5+1),Automatic,More,
+122,123,Perpendicular Vegetation Index,PVI,(1√a2+1)(NIR-ar-b),(1√a2+1)(9-ar-b),Automatic,More,
+123,124,Ratio Analysis of Reflectance Spectra A1,RARSa1,675nm700nmr675r700,45r675r700,Automatic,More,
+124,125,Ratio Analysis of Reflectance Spectra A2,RARSa2,680nm700nmr680r700,45r680r700,Automatic,More,
+125,126,Ratio Analysis of Reflectance Spectra A3,RARSa3,675nm800nmr670r800,48r670r800,Automatic,More,
+126,127,Ratio Analysis of Reflectance Spectra A4,RARSa4,680nm800nmr680r800,48r680r800,Automatic,More,
+127,128,Ratio Analysis of Reflectance Spectra C3,RARSc3,800nm500nmr800r500,82r800r500,Automatic,More,
+128,129,Ratio Analysis of Reflectance Spectra C4,RARSc4,800nm470nmr800r470,82r800r470,Automatic,More,
+129,130,RDVI,RDVI,800nm-670nm(800nm+670nm)0.5,8-4(8+4)0.5,Automatic,More,
+130,131,RDVI2,RDVI2,833nm-658nm√833nm+658nm,8-4√8+4,Automatic,More,
+131,132,Red edge 1,Rededge1,[708:716][676:685],54,Automatic,More,
+132,133,Red edge 2,Rededge2,[708:716]-[676:685][708:716]+[676:685],5-45+4,Automatic,More,
+133,134,Red-Blue NDVI,RBNDVI,NIR-(RED+BLUE)NIR+(RED+BLUE),9-(5+1)9+(5+1),Automatic,More,
+134,135,Red-Edge Inflection Point 1,REIP1,700+40((670nm+780nm2)-700nm740nm-700nm),700+40((4+72)-56-5),Automatic,More,
+135,136,Red-Edge Inflection Point 2,REIP2,702+40((667nm+782nm2)-702nm742nm-702nm),702+40((4+72)-56-5),Automatic,More,
+136,137,Red-Edge Inflection Point 3,REIP3,705+35((665nm+783nm2)-705nm740nm-705nm),705+35((4+72)-56-5),Automatic,More,
+137,138,Red-Edge Position Linear Interpolation,REP,700+40(670nm+780nm2)-700nm740nm-700nm,700+40(4+72)-56-5,Automatic,More,
+138,139,Reduced Simple Ratio,RSR,NIRRED·MIRmax-MIRMIRmax-MIRmin,95·MIRmax-12MIRmax-MIRmin,Automatic,More,
+139,140,Reflectance at the inflexion point,Rre,[670]+[780]2,4+72,Automatic,More,
+140,141,Renormalized Difference Vegetation Index,RDVI,800nm-670nm√800nm+670nm,8-4√8+4,Automatic,More,
+141,142,SAVImir,SAVImir,(NIR-MIR)1+LNIR+MIR+L,(9-12)1+L9+12+L,Automatic,More,
+142,143,Shape Index,IF,2R-G-BG-B,25-3-13-1,Automatic,More,
+143,144,Simple Ratio 1599/819 Moisture Stress Index 2,MSI2,1599nm819nm,118,Automatic,More,
+144,145,Simple Ratio 1600/820 Moisture Stress Index,MSI,1600nm820nm,118,Automatic,More,
+145,146,Simple Ratio 1650/2218,TM5/TM7,1650nm2218nm,1112,Automatic,More,
+146,147,Simple Ratio 440/740,SR440/740,440nm740nm,16,Automatic,More,
+147,148,Simple Ratio 450/550 Blue green pigment index,BGI,450nm550nm,13,Automatic,More,
+148,149,Simple Ratio 520/670,SR520/670,520nm670nm,24,Automatic,More,
+149,150,Simple Ratio 550/670,SR550/670,550nm670nm,34,Automatic,More,
+150,151,Simple Ratio 550/680 Disease-Water Stress Index 4,DSWI-4,550nm680nm,34,Automatic,More,
+151,152,Simple Ratio 550/800,SR550/800,550nm800nm,38,Automatic,More,
+152,153,Simple Ratio 554/677 Greenness Index,GI,554nm677nm,34,Automatic,More,
+153,154,Simple Ratio 560/658 GRVIhyper,SR560/658,560nm658nm,34,Automatic,More,
+154,155,Simple Ratio 672/550 Datt5,SR672/550,672nm550nm,43,Automatic,More,
+155,156,Simple Ratio 672/708,SR672/708,672nm708nm,45,Automatic,More,
+156,157,Simple Ratio 674/553,SR674/553,674nm553nm,43,Automatic,More,
+157,158,Simple Ratio 675/555,SR675/555,675nm555nm,43,Automatic,More,
+158,159,Simple Ratio 675/700,SR675/700,675nm700nm,45,Automatic,More,
+159,160,Simple Ratio 675/705,SR675/705,675nm705nm,45,Automatic,More,
+160,161,Simple Ratio 700,SR700,1700nm,15,Automatic,More,
+161,162,Simple Ratio 700/670,SR700/670,700nm670nm,54,Automatic,More,
+162,163,Simple Ratio 710/670,SR710/670,710nm670nm,54,Automatic,More,
+163,164,Simple Ratio 735/710,SR735/710,735nm[700:710],65,Automatic,More,
+164,165,Simple Ratio 774/677,SR774/677,774nm677nm,74,Automatic,More,
+165,166,Simple Ratio 800/2170,SR800/2170,800nm2170nm,812,Automatic,More,
+166,167,Simple Ratio 800/470 Pigment specific simple ratio C2,PSSRc2,800nm470nm,82,Automatic,More,
+167,168,Simple Ratio 800/500 Pigment specific simple ratio C1,PSSRc1,800nm500nm,82,Automatic,More,
+168,169,Simple Ratio 800/550,SR800/550,800nm550nm,83,Automatic,More,
+169,170,Simple Ratio 800/650 Pigment specific simple ratio B1,PSSRb1,800nm650nm,84,Automatic,More,
+170,171,Simple Ratio 800/670 Ratio Vegetation Index,RVI,800nm670nm,84,Automatic,More,
+171,172,Simple Ratio 800/675 Pigment specific simple ratio A1,PSSRa1,800nm675nm,84,Automatic,More,
+172,173,Simple Ratio 800/680 Pigment Specific Simple Ratio (Cholophyll a) (PSSRa),SR800/680,800nm680nm,84,Automatic,More,
+173,174,Simple Ratio 801/550 NIR/Green,SR801/550,801nm550nm,83,Automatic,More,
+174,175,Simple Ratio 801/670 NIR/Red,SR801/670,801nm670nm,84,Automatic,More,
+175,176,Simple Ratio 810/560 Plant biochemical index,PBI,810nm560nm,83,Automatic,More,
+176,177,Simple Ratio 833/1649 MSIhyper,SR833/1649,833nm1649nm,811,Automatic,More,
+177,178,Simple Ratio 833/658,SR833/658,833nm658nm,84,Automatic,More,
+178,179,Simple Ratio 850/710 Datt2,Datt2,850nm710nm,85,Automatic,More,
+179,180,Simple Ratio 860/550,SR860/550,860nm550nm,8a3,Automatic,More,
+180,181,Simple Ratio 860/708,SR860/708,860nm708nm,8a5,Automatic,More,
+181,182,Simple Ratio MIR/NIR Ratio Drought Index,RDI,MIRNIR,129,Automatic,More,
+182,183,Simple Ratio MIR/Red Eisenhydroxid-Index,SRMIR/Red,MIRRED,125,Automatic,More,
+183,184,Simple Ratio NIR/700-715,SRNir/700-715,NIR[700:715],95,Automatic,More,
+184,185,Simple Ratio NIR/G Green Ratio Vegetation Index,GRVI,NIRG,93,Automatic,More,
+185,186,Simple Ratio NIR/MIR,SRNIR/MIR,NIRMIR,912,Automatic,More,
+186,187,"Simple Ratio NIR/RED Difference Vegetation Index, Vegetation Index Number (VIN)",DVI,NIRRED,95,Automatic,More,
+187,188,Simple Ratio NIR/Rededge RedEdge Ratio Index 1,RRI1,NIRrededge,95,Automatic,More,
+188,189,Simple Ratio Red/Blue Iron Oxide,IO,REDBLUE,51,Automatic,More,
+189,190,Simple Ratio Red/Green Red-Green Ratio,RGR,REDGREEN,53,Automatic,More,
+190,191,Simple Ratio Red/NIR Ratio Vegetation-Index,SRRed/NIR,REDNIR,59,Automatic,More,
+191,192,Simple Ratio SWIRI/NIR Ferrous Minerals,SRSWIRI/NIR,SWIRINIR,SWIRI9,Automatic,More,
+192,193,Single Band 1580,SB1580,1580nm,11,Automatic,More,
+193,194,Single Band 2100,SB2100,2100nm,12,Automatic,More,
+194,195,Single Band 2130,SB2130,2130nm,12,Automatic,More,
+195,196,Single Band 2180,SB2180,2180nm,12,Automatic,More,
+196,197,Single Band 2218,SB2218,2218nm,12,Automatic,More,
+197,198,Single Band 2240,SB2240,2240nm,12,Automatic,More,
+198,199,Single Band 2250,SB2250,2250nm,12,Automatic,More,
+199,200,Single Band 2270,SB2270,2270nm,12,Automatic,More,
+200,201,Single Band 2280,SB2280,2280nm,12,Automatic,More,
+201,202,Single Band 460,SB460,460nm,2,Automatic,More,
+202,203,Single Band 470 Blackburn3,BB3,470nm,2,Automatic,More,
+203,204,Single Band 495,SR495,495nm,2,Automatic,More,
+204,205,Single Band 550,SB550,550nm,3,Automatic,More,
+205,206,Single Band 555,SB555,555nm,3,Automatic,More,
+206,207,Single Band 655,SB655,655nm,4,Automatic,More,
+207,208,Single Band 660,SB660,660nm,4,Automatic,More,
+208,209,Single Band 670,SB670,670nm,4,Automatic,More,
+209,210,Single Band 675,SB675,675nm,4,Automatic,More,
+210,211,Single Band 680 Blackburn1,BB1,680nm,4,Automatic,More,
+211,212,Single Band 700,SB700,700nm,5,Automatic,More,
+212,213,Single Band 703 Boochs,SB703,703nm,5,Automatic,More,
+213,214,Single Band 705,SB705,705nm,5,Automatic,More,
+214,215,Single Band 735,SB735,735nm,6,Automatic,More,
+215,216,Single Band 801,SB801,801nm,8,Automatic,More,
+216,217,Single Band 850,SB850,850nm,8,Automatic,More,
+217,218,Single Band 885,SB885,885nm,8,Automatic,More,
+218,219,Soil Adjusted Vegetation Index,SAVI,800nm-670nm800nm+670nm+L(1+L),8-48+4+L(1+L),Automatic,More,
+219,220,Soil and Atmospherically Resistant Vegetation Index,SARVI,(1+L)800nm-(Rr-y(RB-Rr))800nm+-(Rr-y(RB-Rr))+L,(1+L)8-(Rr-y(RB-Rr))8+-(Rr-y(RB-Rr))+L,Automatic,More,
+220,221,Soil and Atmospherically Resistant Vegetation Index 2,SARVI2,"2,5NIR-RED1+NIR+6RED-7,5BLUE","2,59-51+9+65-7,51",Automatic,More,
+221,222,Soil and Atmospherically Resistant Vegetation Index 3,SAVI3,"(1+0,5)833nm-658nm833nm+658nm+0,5","(1+0,5)8-48+4+0,5",Automatic,More,
+222,223,Soil Background Line,SBL,[800:1100]-2.4[600:700],9-2.44,Automatic,More,
+223,224,Soil Composition Index,,[1600:1700]-[760:860][1600:1700]+[760:860],11-811+8,Automatic,More,
+224,225,Soil-adjusted vegetation index 2,SAVI2,NIRRED+ba,95+ba,Automatic,More,
+225,226,Specific Leaf Area Vegetation Index,SLAVI,NIRRED+SWIR,95+12,Automatic,More,
+226,227,SQRT(IR/R),SQRT(IR/R),√NIRRED,√95,Automatic,More,
+227,228,Structure Intensive Pigment Index 1,SIPI1,800nm-445nm800nm-680nm,8-18-4,Automatic,More,
+228,229,Structure Intensive Pigment Index 3,SIPI3,800nm-470nm800nm-680nm,8-28-4,Automatic,More,
+229,230,Tasselled Cap - brightness,SBI,0.3037[450:520]+0.2793[520:600]+0.4743[630:690]+0.5585[760:900]+0.5082[1150:1750]+0.1863[2080:2350],0.30372+0.27933+0.47434+0.55858+0.508210+0.186312,Automatic,More,
+230,231,Tasselled Cap - Green Vegetation Index MSS,GVIMSS,-0.283[500:600]-0.660[600:700]+0.577[700:800]+0.388[800:1100],0.022800000000000042,Automatic,More,
+231,232,Tasselled Cap - Non Such Index MSS,NSIMSS,-0.016[500:600]+0.131[600:700]-0.425[700:800]+0.882[800:1100],0.5724,Automatic,More,
+232,233,Tasselled Cap - Soil Brightness Index MSS,SBIMSS,0.332[500:600]+0.603[600:700]+0.675[700:800]+0.262[800:1100],0.3323+0.6034+0.6756+0.2629,Automatic,More,
+233,234,Tasselled Cap - vegetation,GVI,-0.2848[450:520]-0.2435[520:600]-0.5436[630:690]+0.7243[760:900]+0.0840[1550:1750]-0.1800[2080:2350],-0.443611,Automatic,More,
+234,235,Tasselled Cap - wetness,WET,0.1509[450:520]+0.1973[520:600]+0.3279[630:690]+0.3406[760:900]-0.7112[1550:1750]-0.4572[2080:2350],0.15092+0.19733+0.32794+0.34068-0.711211-0.457212,Automatic,More,
+235,236,Tasselled Cap - Yellow Vegetation Index MSS,YVIMSS,-0.899[500:600]+0.428[600:700]+0.076[700:800]-0.041[800:1100],-0.4362,Automatic,More,
+236,237,TCARI/OSAVI,TCARI/OSAVI,3(700nm-670nm)-0.2(700nm-550nm)700nm670nm(1+0.16)800nm-670nm800nm+670nm+0.16,3(5-4)-0.2(5-3)54(1+0.16)8-48+4+0.16,Automatic,More,
+237,238,Transformed Chlorophyll Absorbtion Ratio,TCARI,3((700nm-670nm)-0.2(700nm-550nm)(700nm670nm)),3((5-4)-0.2(5-3)(54)),Automatic,More,
+238,239,Transformed NDVI,TNDVI,√NIR-REDNIR+RED+0.5,√9-59+5+0.5,Automatic,More,
+239,240,Transformed Soil Adjusted Vegetation Index,TSAVI,B(NIR-B·R-A)RED+B(NIR-A)+X(1+B2),B(9-B·5-A)5+B(9-A)+X(1+B2),Automatic,More,
+240,241,Transformed Soil Adjusted Vegetation Index 2,TSAVI,a·NIR-a·RED-bRED+a·NIR-a·b,a·9-a·5-b5+a·9-a·b,Automatic,More,
+241,242,Transformed Vegetation Index,TVI,"√(NDVI)+0,5","√((5-35+3))+0,5",Automatic,More,
+242,243,Triangular chlorophyll index,TCI,1.2(700nm-550nm)-1.5(670nm-550nm)·√700nm670nm,1.2(5-3)-1.5(4-3)·√54,Automatic,More,
+243,244,Vegetation Index 700,VI700,700nm-[660:680]700nm+[660:680],5-45+4,Automatic,More,
+244,245,Visible Atmospherically Resistant Index Green,VARIgreen,[545:565]-[620:680][545:565]+[620:680]-[459:490],3-43+4-2,Automatic,More,
+245,246,Visible Atmospherically Resistant Indices 700,VARI700,"[700]-1,7[660:680]+0,7[470:490][700]+2,3[660:680]-1,3[470:490]","5-1,74+0,725+2,34-1,32",Automatic,More,
+246,247,Visible Atmospherically Resistant Indices RedEdge,VARIrededge,[700:710]-[620:680][700:710]+[620:680],5-45+4,Automatic,More,
+247,248,Weighted Difference Vegetation Index,WDVI,NIR-a·RED,9-a·5,Automatic,More,
+248,249,Wide Dynamic Range Vegetation Index,WDRVI,0.1NIR-RED0.1NIR+RED,0.19-50.19+5,Automatic,More,
